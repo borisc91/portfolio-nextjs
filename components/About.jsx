@@ -15,7 +15,7 @@ const About = () => {
           <p className=' text-lg py-2 text-gray-600'>
           I'm a front-end web developer with experience in digital marketing and computer systems(I worked as System Administrator for 4 years).
           <br />
-           <br />Many years of IT experience has given me a strong foundation for web development and building complex solutions.
+           <br />Many years of IT experience have given me a strong foundation for web development and building complex solutions.
              I am passionate about coding and solving problems through code,
            and I am excited to work alongside other amazing programmers and learn so much more! <br />
            <br />
@@ -32,9 +32,9 @@ const About = () => {
               Check out some of my latest projects.
             </p>
           </Link>
-          <a className='shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] text-white px-6 py-3 my-14 hover:scale-105 ease-in duration-300' href='/assets/Boris Čolović CV.pdf' download>DOWNLOAD MY CV</a>
+          <a className='shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] text-white px-6 py-3 my-14 mb-14 hover:scale-105 ease-in duration-300' href='/assets/Boris Čolović CV.pdf' download>DOWNLOAD MY CV</a>
         </div>
-        <div className='w-full h-auto m-auto  rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300'>
+        <div className='w-full h-auto rounded-xl flex items-center justify-center py-4 hover:scale-105 ease-in duration-300 mt-4'>
           <Image src={AboutImg} className='rounded-xl' alt='lap-top opening' />
         </div>
       </div>
