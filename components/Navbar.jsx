@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai';
+import logo from '../public/assets/logo1.png'
+import logomin from '../public/assets/logo.png'
 
 
 
@@ -17,7 +19,7 @@ const handleNav = () => {
   return (
     <div className='fixed w-full h-20 shadow-xl z-[100]'>
         <div className='flex justify-between items-center w-full h-full px-2 2xl:px-9'>
-            <Image src='/../public/assets/logo1.png' alt="logo" width="125" height="10" priority />
+            <Image src={logo} alt="logo" />
         <div>
             <ul className='hidden md:flex'>
                 <Link href='/'>
@@ -47,7 +49,7 @@ const handleNav = () => {
        'fixed left-[-130%] top-0 p-10 ease-in duration-500' }>
                 <div>
                     <div className='flex w-full items-center justify-between'>
-                    <Image src='/../public/assets/logo.png' alt="logo" width="87" height="35" priority />
+                    <Image src={logomin} alt="logo"  />
                     <div onClick={handleNav} className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer'>
                         <AiOutlineClose />
                     </div>
