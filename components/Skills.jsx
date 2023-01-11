@@ -26,7 +26,7 @@ const Skills = () => {
                 <Image src={Html} width='64px' height='64px' alt='/' />
               </div>
               <div className='flex flex-col items-center justify-center'>
-                <h3>HTML</h3>
+                <h3 className='text-base sm:text-3xl'>HTML</h3>
               </div>
             </div>
           </div>
@@ -36,17 +36,17 @@ const Skills = () => {
                 <Image src={Css} width='64px' height='64px' alt='/' />
               </div>
               <div className='flex flex-col items-center justify-center'>
-                <h3>CSS</h3>
+                <h3 className='text-base sm:text-3xl'>CSS</h3>
               </div>
             </div>
           </div>
           <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
             <div className='grid grid-cols-2 gap-4 justify-center items-center'>
-              <div className='m-auto'>
-                <Image src={Javascript} width='64px' height='64px' alt='/' />
+              <div className='m-automr-2 sm:mr-auto'>
+                <Image src={Javascript} width='54px' height='54px'  alt='/' />
               </div>
               <div className='flex flex-col items-center justify-center'>
-                <h3>JavaScript</h3>
+                <h3 className='text-base ml-2.5 sm:text-3xl'>JavaScript</h3>
               </div>
             </div>
           </div>
@@ -56,7 +56,7 @@ const Skills = () => {
                 <Image src={ReactImg} width='64px' height='64px' alt='/' />
               </div>
               <div className='flex flex-col items-center justify-center'>
-                <h3>React</h3>
+                <h3 className='text-base sm:text-3xl'>React</h3>
               </div>
             </div>
           </div>
@@ -66,7 +66,7 @@ const Skills = () => {
                 <Image src={Tailwind} width='64px' height='64px' alt='/' />
               </div>
               <div className='flex flex-col items-center justify-center'>
-                <h3>Tailwind</h3>
+                <h3 className='text-base sm:text-3xl'>Tailwind</h3>
               </div>
             </div>
           </div>
@@ -76,7 +76,7 @@ const Skills = () => {
                 <Image src={Firebase} width='64px' height='64px' alt='/' />
               </div>
               <div className='flex flex-col items-center justify-center'>
-                <h3>Firebase</h3>
+                <h3 className='text-base sm:text-3xl'>Firebase</h3>
               </div>
             </div>
           </div>
@@ -86,27 +86,27 @@ const Skills = () => {
                 <Image src={Github} width='64px' height='64px' alt='/' />
               </div>
               <div className='flex flex-col items-center justify-center'>
-                <h3>Github</h3>
+                <h3 className='text-base sm:text-3xl'>Github</h3>
               </div>
             </div>
           </div>
           <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
             <div className='grid grid-cols-2 gap-4 justify-center items-center'>
               <div className='m-auto'>
-                <Image src={NextJS} width='64px' height='64px' alt='/' />
+                <Image src={NextJS} width='64px' height='64px'  alt='NextJs icon' />
               </div>
               <div className='flex flex-col items-center justify-center'>
-                <h3>Next</h3>
+                <h3 className='text-base sm:text-3xl'>Next</h3>
               </div>
             </div>
           </div>
           <div className='p-6 shadow-xl rounded-xl hover:scale-105 ease-in duration-300'>
             <div className='grid grid-cols-2 gap-4 justify-center items-center'>
               <div className='m-auto'>
-                <Image src={Bootstrap} width='64px' height='64px' alt='/' />
+                <Image src={Bootstrap} width='64px' height='64px' alt='Bootstrap icon' />
               </div>
               <div className='flex flex-col items-center justify-center'>
-                <h3>Bootstrap</h3>
+                <h3 className='text-base ml-4 sm:text-3xl'>Bootstrap</h3>
               </div>
             </div>
           </div>
@@ -116,7 +116,7 @@ const Skills = () => {
                 <Image src={Sass} width='64px' height='64px' alt='/' />
               </div>
               <div className='flex flex-col items-center justify-center'>
-                <h3>Sass</h3>
+                <h3 className='text-base sm:text-3xl'>Sass</h3>
               </div>
             </div>
           </div>

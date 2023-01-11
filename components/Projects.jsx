@@ -1,22 +1,11 @@
 import React from "react";
-import YouTube from "react-youtube";
+import dynamic from "next/dynamic";
+const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
 
 
 
 function Projects() {
-  const opts = {
-    height: "390",
-    width: "640",
-    origin: 'http://localhost:3000' ,
-      host: 'https://www.youtube.com',
-    playerVars: {
-      autoplay: 0,
-      origin: 'https://localhost:3000' ,
-      host: 'https://www.youtube.com'
-            
-      
-    },
-  };
+ 
 
   const builtProjects = [
     {
@@ -24,7 +13,7 @@ function Projects() {
       title: "Drone eCommerce",
       description:
         "I created a drone web shop using useState, useReducer, useEffect, ContextApi, Firebase API Backend, Firebase REST API Authentication for loggin and Sass. Worked with session storage and local storage. It has a cart modal created with React Portals.",
-      youtubeId: "uaSZCcoze8A",
+      youtubeId: "https://www.youtube.com/watch?v=uaSZCcoze8A",
       technologies: [
         "React",
         "Authentication",
@@ -41,7 +30,7 @@ function Projects() {
       title: "Connect Four",
       description:
         "I built Connect Four game in React as a part of FrontEndMentor.io challenge. I built winning logic(4 in a row, column or diagonal), timer logic, and used Sass for design.",
-      youtubeId: "s9xjSTK4mRk",
+      youtubeId: "https://www.youtube.com/watch?v=s9xjSTK4mRk",
       technologies: ["React", "Sass"],
       projectCodeLink: "https://github.com/borisc91/ConnectFour",
       projectLink: "https://connectfour-borisc91.netlify.app/",
@@ -51,7 +40,7 @@ function Projects() {
       title: "To Do List(Drag-n-Drop)",
       description:
         "This is a basic To Do app with drag and drop feature. I also used Sass for styling and I added a few more options to clear finished items, and to see only active or only finished tasks.",
-      youtubeId: "tw-7Vpesnr8",
+      youtubeId: "https://www.youtube.com/watch?v=tw-7Vpesnr8",
       technologies: ["React", "Sass", "Context API"],
       projectCodeLink: "https://github.com/borisc91/To-Do",
       projectLink: "https://todo-borisc91.netlify.app/",
@@ -61,7 +50,7 @@ function Projects() {
       title: "Calculator",
       description:
         "This is calculator with basic options made in vanilla java script. This project was challenging back when I first started to code and it shows the thinking process. It's neccessary to know basic JS before getting into React. That's why I'm showing this project here.",
-      youtubeId: "TdX6aLtFwls",
+      youtubeId: "https://www.youtube.com/watch?v=TdX6aLtFwls",
       technologies: ["Java Script"],
       projectCodeLink: "https://github.com/borisc91/calculator-vanilla-js",
       projectLink: "https://calculator-borisc91.netlify.app/",
@@ -86,7 +75,7 @@ function Projects() {
                 {project.technologies.map((buttonText, index) => {
                    
                return (
-                   <button key={index} className="shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] text-white px-2 py-0.5 mr-2 hover:scale-105 ease-in duration-300">
+                   <button key={index} className=" mt-3 shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] text-white px-2 py-0.5 mr-2 hover:scale-105 ease-in duration-300">
                     {buttonText}
                   </button> 
                );
@@ -99,14 +88,14 @@ function Projects() {
                 <a
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="cta-btn cta-btn--hero"
+                          
                           href={project.projectLink} className="bg-transparent hover:bg-gradient-to-r from-[#5651e5] to-[#709dff] text-blue-700 font-semibold hover:text-white mr-2 py-1 px-4 border border-blue-500 hover:border-transparent rounded">
                   See Live
                 </a>
                 <a
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="cta-btn cta-btn--hero"
+                          
                           href={project.projectCodeLink}
                           
                          className="bg-transparent hover:bg-gradient-to-r from-[#5651e5] to-[#709dff] text-blue-700 font-semibold hover:text-white mr-2 py-1 px-4 border border-blue-500 hover:border-transparent rounded">
@@ -114,12 +103,9 @@ function Projects() {
                 </a>
               </div>
             </div>
-            <div>
-              <YouTube
-                className="mt-11"
-                videoId={project.youtubeId}
-                opts={opts}
-              />
+            <div className="max-w-2xl w-full flex justify-center" >
+            <ReactPlayer url={project.youtubeId} width="95%" className="video-player" />
+              
             </div>
           </div> 
         );
