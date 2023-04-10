@@ -1,6 +1,6 @@
 import React from "react";
 import dynamic from "next/dynamic";
-const ReactPlayer = dynamic(() => import("react-player/lazy"), { ssr: false });
+const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 
 
@@ -8,8 +8,25 @@ function Projects() {
  
 
   const builtProjects = [
+    
     {
+
       id: 1,
+      title: "Audiophile eCommerce",
+      description:
+        "I created an audio store using Material UI, Typescript, Redux, following the Frontend-Mentor challenge. ",
+      youtubeId: "https://youtu.be/PWrs3pyzPws",
+      technologies: [
+        "React",
+        "Typescript",
+        "Redux",
+        "Material UI"
+      ],
+      projectCodeLink: "https://github.com/borisc91/audiophile-ecommerce"
+    },
+     {
+
+      id: 2,
       title: "Drone eCommerce",
       description:
         "I created a drone web shop using useState, useReducer, useEffect, ContextApi, Firebase API Backend, Firebase REST API Authentication for loggin and Sass. Worked with session storage and local storage. It has a cart modal created with React Portals.",
@@ -18,15 +35,13 @@ function Projects() {
         "React",
         "Authentication",
         "ContextAPI",
-        "Firebase REST Api",
-        
-        "Sass",
+        "Firebase REST Api"
       ],
       projectCodeLink: "https://github.com/borisc91/Drone-eCommerce",
       projectLink: "https://ecommercedrone-boris.netlify.app/",
     },
     {
-      id: 2,
+      id: 3,
       title: "Connect Four",
       description:
         "I built Connect Four game in React as a part of FrontEndMentor.io challenge. I built winning logic(4 in a row, column or diagonal), timer logic, and used Sass for design.",
@@ -36,7 +51,7 @@ function Projects() {
       projectLink: "https://connectfour-borisc91.netlify.app/",
     },
     {
-      id: 3,
+      id: 4,
       title: "To Do List(Drag-n-Drop)",
       description:
         "This is a basic To Do app with drag and drop feature. I also used Sass for styling and I added a few more options to clear finished items, and to see only active or only finished tasks.",
@@ -46,7 +61,7 @@ function Projects() {
       projectLink: "https://todo-borisc91.netlify.app/",
     },
     {
-      id: 4,
+      id: 5,
       title: "Calculator",
       description:
         "This is calculator with basic options made in vanilla java script. This project was challenging back when I first started to code and it shows the thinking process. It's neccessary to know basic JS before getting into React. That's why I'm showing this project here.",
@@ -85,13 +100,13 @@ function Projects() {
                 <p className="text-lg">{project.description}</p>
               </div>
               <div className="mt-4">
-                <a
+              {project.projectLink &&  <a
                           target="_blank"
                           rel="noopener noreferrer"
                           
                           href={project.projectLink} className="bg-transparent hover:bg-gradient-to-r from-[#5651e5] to-[#709dff] text-blue-700 font-semibold hover:text-white mr-2 py-1 px-4 border border-blue-500 hover:border-transparent rounded">
                   See Live
-                </a>
+                </a> }
                 <a
                           target="_blank"
                           rel="noopener noreferrer"
